@@ -1,0 +1,8 @@
+# BeDAViN Dataset
+BeDAViN is generated with audio samples recorded manually by us, audio clips from AudioSet and Freesound. The processed audio wav files are listed in `data/sounds/sound_event_splits` with 16-bit precision and 16,000 Hz sampling rate. The raw manually collected wav files with 24-bit precision and 96,000 Hz sampling rate can be found [here](), and the original audio clips from [AudioSet](https://research.google.com/audioset/) and [Freesound](https://annotator.freesound.org/) can be found on their respective websites. All the manually collected audio recordings are are [CC-BY-4.0](../../../LICENSE) licensed, and the audio clips from AudioSet and Freesound are governed by their respective license. 
+
+The information of the audio clips used in this project from Freesound is listed in `*_clips_info_freesound.json` files. These json files include the uploader's name, title, description, tags and link of the original sound clips, the link to the license, and the categories of each clip referred in our dataset. You can access the original wav files with the links in the json files. 
+
+The audio clips used in this project from AudioSet are from the White noise, Sine wave, and Fire classes of the [AudioSet Ontology](https://research.google.com/audioset/ontology/index.html). These audio clips are named in `(ID)_(StartTime).wav` format. You can access the original wav files by searching the `ID` on AudioSet. 
+
+The `sound_event_settings.json` file saves the settings for sound event simulation, including the duration of each sound event category, the length of interruption between two sound events, and whether the sound event is everlasting. 

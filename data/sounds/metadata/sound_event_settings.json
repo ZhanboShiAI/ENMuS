@@ -1,0 +1,359 @@
+{
+    "_comment" : {
+        "long duration at once": {
+            "length": 300,
+            "length_upper_limit": 500,
+            "length_lower_limit": 90,
+            "continuous": false,
+            "type": "sound_event",
+            "interval": -1,
+            "interval_upper_limit": -1,
+            "interval_lower_limit": -1
+        },
+        "long duration with large interval": {
+            "length": 300,
+            "length_upper_limit": 500,
+            "length_lower_limit": 90,
+            "continuous": false,
+            "type": "sound_event",
+            "interval": 60,
+            "interval_upper_limit": 90,
+            "interval_lower_limit": 30
+        },
+        "long duration with middle interval": {
+            "length": 300,
+            "length_upper_limit": 500,
+            "length_lower_limit": 90,
+            "continuous": false,
+            "type": "sound_event",
+            "interval": 30,
+            "interval_upper_limit": 60,
+            "interval_lower_limit": 10
+        },
+        "long duration with small interval": {
+            "length": 300,
+            "length_upper_limit": 500,
+            "length_lower_limit": 90,
+            "continuous": false,
+            "type": "sound_event",
+            "interval": 10,
+            "interval_upper_limit": 30,
+            "interval_lower_limit": 2
+        },
+        "short duration with large interval": {
+            "length": 120,
+            "length_upper_limit": 180,
+            "length_lower_limit": 60,
+            "continuous": false,
+            "type": "sound_event",
+            "interval": 60,
+            "interval_upper_limit": 90,
+            "interval_lower_limit": 30
+        },
+        "short duration with middle interval": {
+            "length": 120,
+            "length_upper_limit": 180,
+            "length_lower_limit": 60,
+            "continuous": false,
+            "type": "sound_event",
+            "interval": 30,
+            "interval_upper_limit": 60,
+            "interval_lower_limit": 10
+        },
+        "short duration with small interval": {
+            "length": 120,
+            "length_upper_limit": 180,
+            "length_lower_limit": 60,
+            "continuous": false,
+            "type": "sound_event",
+            "interval": 10,
+            "interval_upper_limit": 30,
+            "interval_lower_limit": 2
+        },
+        "continuous": {
+            "length": -1,
+            "length_upper_limit": -1,
+            "length_lower_limit": -1,
+            "continuous": true,
+            "type": "sound_event",
+            "interval": -1,
+            "interval_upper_limit": -1,
+            "interval_lower_limit": -1
+        }
+    },
+    "bathtub": {
+        "everlasting": false,
+        "length": 300,
+        "length_upper_limit": 500,
+        "length_lower_limit": 90,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 10,
+        "interval_upper_limit": 30,
+        "interval_lower_limit": 2
+    },
+    "bed": {
+        "everlasting": false,
+        "length": 300,
+        "length_upper_limit": 500,
+        "length_lower_limit": 90,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 60,
+        "interval_upper_limit": 90,
+        "interval_lower_limit": 30
+    },
+    "cabinet": {
+        "everlasting": false,
+        "length": 120,
+        "length_upper_limit": 180,
+        "length_lower_limit": 60,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 60,
+        "interval_upper_limit": 90,
+        "interval_lower_limit": 30
+    },
+    "chair": {
+        "everlasting": false,
+        "length": 300,
+        "length_upper_limit": 500,
+        "length_lower_limit": 90,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 10,
+        "interval_upper_limit": 30,
+        "interval_lower_limit": 2
+    },
+    "chest_of_drawers": {
+        "everlasting": false,
+        "length": 120,
+        "length_upper_limit": 180,
+        "length_lower_limit": 60,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 60,
+        "interval_upper_limit": 90,
+        "interval_lower_limit": 30
+    },
+    "clothes": {
+        "everlasting": false,
+        "length": 120,
+        "length_upper_limit": 180,
+        "length_lower_limit": 60,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 60,
+        "interval_upper_limit": 90,
+        "interval_lower_limit": 30
+    },
+    "counter": {
+        "everlasting": false,
+        "length": 300,
+        "length_upper_limit": 500,
+        "length_lower_limit": 90,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 30,
+        "interval_upper_limit": 60,
+        "interval_lower_limit": 10
+    },
+    "cushion": {
+        "everlasting": false,
+        "length": 120,
+        "length_upper_limit": 180,
+        "length_lower_limit": 60,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 10,
+        "interval_upper_limit": 30,
+        "interval_lower_limit": 2
+    },
+    "fireplace": {
+        "everlasting": true,
+        "length": -1,
+        "length_upper_limit": -1,
+        "length_lower_limit": -1,
+        "continuous": true,
+        "type": "sound_event",
+        "interval": -1,
+        "interval_upper_limit": -1,
+        "interval_lower_limit": -1
+    },
+    "gym_equipment": {
+        "everlasting": true,
+        "length": -1,
+        "length_upper_limit": -1,
+        "length_lower_limit": -1,
+        "continuous": true,
+        "type": "sound_event",
+        "interval": -1,
+        "interval_upper_limit": -1,
+        "interval_lower_limit": -1
+    },
+    "picture": {
+        "everlasting": false,
+        "length": 120,
+        "length_upper_limit": 180,
+        "length_lower_limit": 60,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 30,
+        "interval_upper_limit": 60,
+        "interval_lower_limit": 10
+    },
+    "plant": {
+        "everlasting": false,
+        "length": 120,
+        "length_upper_limit": 180,
+        "length_lower_limit": 60,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 30,
+        "interval_upper_limit": 60,
+        "interval_lower_limit": 10
+    },
+    "seating": {
+        "everlasting": false,
+        "length": 300,
+        "length_upper_limit": 500,
+        "length_lower_limit": 90,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 30,
+        "interval_upper_limit": 60,
+        "interval_lower_limit": 10
+    },
+    "shower": {
+        "everlasting": false,
+        "length": 300,
+        "length_upper_limit": 500,
+        "length_lower_limit": 90,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": -1,
+        "interval_upper_limit": -1,
+        "interval_lower_limit": -1
+    },
+    "sink": {
+        "everlasting": false,
+        "length": 300,
+        "length_upper_limit": 500,
+        "length_lower_limit": 90,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": -1,
+        "interval_upper_limit": -1,
+        "interval_lower_limit": -1
+    },
+    "sofa": {
+        "everlasting": false,
+        "length": 300,
+        "length_upper_limit": 500,
+        "length_lower_limit": 90,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 30,
+        "interval_upper_limit": 60,
+        "interval_lower_limit": 10
+    },
+    "stool": {
+        "everlasting": false,
+        "length": 300,
+        "length_upper_limit": 500,
+        "length_lower_limit": 90,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 60,
+        "interval_upper_limit": 90,
+        "interval_lower_limit": 30
+    },
+    "table": {
+        "everlasting": false,
+        "length": 120,
+        "length_upper_limit": 180,
+        "length_lower_limit": 60,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 30,
+        "interval_upper_limit": 60,
+        "interval_lower_limit": 10
+    },
+    "toilet": {
+        "everlasting": false,
+        "length": 120,
+        "length_upper_limit": 180,
+        "length_lower_limit": 60,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 60,
+        "interval_upper_limit": 90,
+        "interval_lower_limit": 30
+    },
+    "towel": {
+        "everlasting": false,
+        "length": 120,
+        "length_upper_limit": 180,
+        "length_lower_limit": 60,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": 10,
+        "interval_upper_limit": 30,
+        "interval_lower_limit": 2
+    },
+    "tv_monitor": {
+        "everlasting": false,
+        "length": 300,
+        "length_upper_limit": 500,
+        "length_lower_limit": 90,
+        "continuous": false,
+        "type": "sound_event",
+        "interval": -1,
+        "interval_upper_limit": -1,
+        "interval_lower_limit": -1
+    },
+    "bird": {
+        "everlasting": true,
+        "length": -1,
+        "length_upper_limit": -1,
+        "length_lower_limit": -1,
+        "continuous": true,
+        "type": "noise",
+        "interval": -1,
+        "interval_upper_limit": -1,
+        "interval_lower_limit": -1
+    },
+    "traffic": {
+        "everlasting": true,
+        "length": -1,
+        "length_upper_limit": -1,
+        "length_lower_limit": -1,
+        "continuous": true,
+        "type": "noise",
+        "interval": -1,
+        "interval_upper_limit": -1,
+        "interval_lower_limit": -1
+    },
+    "firework": {
+        "everlasting": true,
+        "length": -1,
+        "length_upper_limit": -1,
+        "length_lower_limit": -1,
+        "continuous": true,
+        "type": "noise",
+        "interval": -1,
+        "interval_upper_limit": -1,
+        "interval_lower_limit": -1
+    },
+    "rain": {
+        "everlasting": true,
+        "length": -1,
+        "length_upper_limit": -1,
+        "length_lower_limit": -1,
+        "continuous": true,
+        "type": "noise",
+        "interval": -1,
+        "interval_upper_limit": -1,
+        "interval_lower_limit": -1
+    }
+}
