@@ -19,9 +19,17 @@
 Audio-visual navigation has received considerable attention in recent years. However, the majority of related investigations have focused on single sound-source scenarios. Studies in this field for multiple sound-source scenarios remain underexplored due to the limitations of two aspects. First, the existing audio-visual navigation dataset only has limited audio samples, making it difficult to simulate diverse multiple sound-source environments. Second, existing navigation frameworks are mainly designed for single sound-source scenarios, thus their performance is severely reduced in multiple sound-source scenarios. To fill in these two research gaps to some extent, we establish a large-scale audio dataset named **BeDAViN** and propose a new embodied navigation framework called **ENMuS<sup>3</sup>**.
 
 ## Citation
-If you use this project in your research, please cite the following [paper]():
+If you use this project in your research, please cite the following [paper](https://ojs.aaai.org/index.php/AAAI/article/view/33608):
 ```
-Coming Soon
+@inproceedings{shi2025towards,
+  title={Towards Audio-Visual Navigation in Noisy Environments: A Large-Scale Benchmark Dataset and an Architecture Considering Multiple Sound-Sources},
+  author={Shi, Zhanbo and Zhang, Lin and Li, Linfei and Shen, Ying},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={14},
+  pages={14673--14680},
+  year={2025}
+}
 ```
 
 ## Appendix
@@ -82,7 +90,7 @@ Room impulse response dataset is used for audio synthesis. You can download this
 
 **Audio Dataset**
 
-The Audio dataset used in this project from three parts, our manual recorded audio files, audio samples selected from [AudioSet](https://research.google.com/audioset/) and [Freesound](https://annotator.freesound.org/). The processed audio wavfiles are saved under `data` directory of the current github repository. The raw 24 bit audio recordings with a sampling rate of 96,000 Hz can be found [here](). As for the information of the original audio clips from AudioSet and Freesound, please refer to [this document](./data/sounds/metadata/README.md). 
+The Audio dataset used in this project from three parts, our manual recorded audio files, audio samples selected from [AudioSet](https://research.google.com/audioset/) and [Freesound](https://annotator.freesound.org/). The processed audio wavfiles are saved under `data` directory of the current github repository. The raw 24 bit audio recordings with a sampling rate of 96,000 Hz can be found [here](https://zenodo.org/records/14486235). As for the information of the original audio clips from AudioSet and Freesound, please refer to [this document](./data/sounds/metadata/README.md). 
 
 **Data Folder Structure**
 ```
