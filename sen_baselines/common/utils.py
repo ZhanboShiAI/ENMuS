@@ -118,6 +118,9 @@ def batch_obs(
         for sensor in obs:
             if sensor in skip_list:
                 continue
+            # remove the last dimension of depth and rgb sensor
+            # if the number of dimensions is 4 like (HEIGHT x WIDTH x CHANNEL x 1)
+            # caused by some version dismatch
             if sensor in ["depth", "rgb"] and len(obs[sensor].shape) == 4:
                 obs[sensor] = obs[sensor].squeeze(-1)
 
@@ -222,32 +225,32 @@ def plot_top_down_map(info, dataset='replica', pred=None):
         agent_rotation=info["top_down_map"]["agent_angle"],
         agent_radius_px=agent_radius_px
     )
-    if pred is not None:
-        from habitat.utils.geometry_utils import quaternion_rotate_vector
+    # if pred is not None:
+    #     from habitat.utils.geometry_utils import quaternion_rotate_vector
 
-        source_rotation = info["top_down_map"]["agent_rotation"]
+    #     source_rotation = info["top_down_map"]["agent_rotation"]
 
-        rounded_pred = np.round(pred[1])
-        direction_vector_agent = np.array([rounded_pred[1], 0, -rounded_pred[0]])
-        direction_vector = quaternion_rotate_vector(source_rotation, direction_vector_agent)
+    #     rounded_pred = np.round(pred[1])
+    #     direction_vector_agent = np.array([rounded_pred[1], 0, -rounded_pred[0]])
+    #     direction_vector = quaternion_rotate_vector(source_rotation, direction_vector_agent)
 
-        grid_size = (
-            (maps.COORDINATE_MAX - maps.COORDINATE_MIN) / 10000,
-            (maps.COORDINATE_MAX - maps.COORDINATE_MIN) / 10000,
-        )
-        delta_x = int(-direction_vector[0] / grid_size[0])
-        delta_y = int(direction_vector[2] / grid_size[1])
+    #     grid_size = (
+    #         (maps.COORDINATE_MAX - maps.COORDINATE_MIN) / 10000,
+    #         (maps.COORDINATE_MAX - maps.COORDINATE_MIN) / 10000,
+    #     )
+    #     delta_x = int(-direction_vector[0] / grid_size[0])
+    #     delta_y = int(direction_vector[2] / grid_size[1])
 
-        x = np.clip(map_agent_pos[0] + delta_x, a_min=0, a_max=top_down_map.shape[0])
-        y = np.clip(map_agent_pos[1] + delta_y, a_min=0, a_max=top_down_map.shape[1])
-        point_padding = 20
-        for m in range(x - point_padding, x + point_padding + 1):
-            for n in range(y - point_padding, y + point_padding + 1):
-                if np.linalg.norm(np.array([m - x, n - y])) <= point_padding and \
-                        0 <= m < top_down_map.shape[0] and 0 <= n < top_down_map.shape[1]:
-                    top_down_map[m, n] = (0, 255, 255)
-        if np.linalg.norm(rounded_pred) < 1:
-            assert delta_x == 0 and delta_y == 0
+    #     x = np.clip(map_agent_pos[0] + delta_x, a_min=0, a_max=top_down_map.shape[0])
+    #     y = np.clip(map_agent_pos[1] + delta_y, a_min=0, a_max=top_down_map.shape[1])
+    #     point_padding = 20
+    #     for m in range(x - point_padding, x + point_padding + 1):
+    #         for n in range(y - point_padding, y + point_padding + 1):
+    #             if np.linalg.norm(np.array([m - x, n - y])) <= point_padding and \
+    #                     0 <= m < top_down_map.shape[0] and 0 <= n < top_down_map.shape[1]:
+    #                 top_down_map[m, n] = (0, 255, 255)
+    #     if np.linalg.norm(rounded_pred) < 1:
+    #         assert delta_x == 0 and delta_y == 0
 
     if top_down_map.shape[0] > top_down_map.shape[1]:
         top_down_map = np.rot90(top_down_map, 1)

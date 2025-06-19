@@ -33,6 +33,9 @@ setup(
         'moviepy',
         'tensorflow',
         'astropy',
-        'scikit-image'
+        'scikit-image',
+        'spaudiopy',
+        'moviepy==1.0.3',
+        'ifcfg',
     ],
 )

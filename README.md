@@ -59,7 +59,7 @@ git checkout v0.2.2
 pip install -e .
 ```
 
-Edit habitat/tasks/rearrange/rearrange_sim.py file and remove the 36th line where FetchRobot is imported.
+Edit habitat-lab/habitat/tasks/rearrange/rearrange_sim.py file and remove the 36th line where FetchRobot is imported.
 
 Then install [SoundSpaces](https://github.com/facebookresearch/sound-spaces) as the instructions [here](https://github.com/facebookresearch/sound-spaces/blob/main/INSTALLATION.md).
 
@@ -67,6 +67,13 @@ Then install [SoundSpaces](https://github.com/facebookresearch/sound-spaces) as 
 git clone https://github.com/facebookresearch/sound-spaces.git
 cd sound-spaces
 pip install -e .
+```
+Edit sound-spaces/soundspaces/tasks/nav.py line 771-774 as follows,
+```
+return np.array(
+    [-agent_position_xyz[2], agent_position_xyz[0], agent_heading[0], ep_time],
+    dtype=np.float32
+)
 ```
 
 Now you can install ENMuS<sup>3</sup>:
@@ -76,6 +83,8 @@ git clone https://github.com/ZhanboShiAI/ENMuS.git
 cd ENMuS
 pip install -e .
 ```
+
+If you have problems with the environment installation, you can refer to this [document](./ENV_INSTALL.md). You can also refer to the [requirements.txt](./requirements.txt) for version information of the installed python packages. Note that the habitat-sim, habitat-lab, sound-spaces, and enmus are not included in the requirements.txt. 
 
 ## Data
 To use ENMuS<sup>3</sup>, you should firstly generate the following data. 

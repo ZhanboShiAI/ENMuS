@@ -21,7 +21,7 @@ from ss_baselines.common.baseline_registry import baseline_registry
 from ss_baselines.common.env_utils import construct_envs
 from ss_baselines.common.environments import get_env_class
 from ss_baselines.common.tensorboard_utils import TensorboardWriter
-from ss_baselines.common.utils import batch_obs, linear_decay, generate_video, NpEncoder
+from sen_baselines.common.utils import batch_obs, linear_decay, generate_video, NpEncoder
 from ss_baselines.common.utils import observations_to_image, plot_top_down_map, resize_observation
 from ss_baselines.savi.ddppo.algo.ddp_utils import (
     EXIT,

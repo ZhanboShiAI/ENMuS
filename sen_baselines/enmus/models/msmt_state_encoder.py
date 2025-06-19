@@ -134,7 +134,7 @@ class MSMTStateEncoder(nn.Module):
         memory = self.fusion_encoder(memory.view(M*bs, -1)).view(M, bs, -1)
 
         t_masks = self._convert_masks_to_transformer_format(memory_masks)
-        if "P2T" in self.decoder_type.__name__:
+        if "MSMT" in self.decoder_type.__name__:
             t_memory_masks = self._format_p2t_masks(memory_masks)
             t_memory_masks = self._convert_masks_to_transformer_format(t_memory_masks)
         else:
