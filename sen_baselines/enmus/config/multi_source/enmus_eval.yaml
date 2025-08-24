@@ -1,0 +1,63 @@
+BASE_TASK_CONFIG_PATH: "configs/multi_source_scenario/enmus/mp3d/semantic_audiogoal.yaml"
+TRAINER_NAME: "ddppo_enmus"
+NUM_PROCESSES: 10
+SENSORS: ["DEPTH_SENSOR", "RGB_SENSOR"]
+TEST_EPISODE_COUNT: 1000
+VIDEO_OPTION: []
+VISUALIZATION_OPTION: []
+
+EVAL:
+  SPLIT: "val"
+  USE_CKPT_CONFIG: True
+
+RL:
+  PPO:
+    norm_first: False
+    clip_param: 0.2
+    ppo_epoch: 2
+    num_mini_batch: 2
+    value_loss_coef: 0.5
+    entropy_coef: 0.05
+    lr: 2.5e-4
+    eps: 1e-5
+    max_grad_norm: 0.2
+    num_steps: 160
+    hidden_size: 512
+    use_gae: True
+    gamma: 0.99
+    tau: 0.95
+    use_linear_clip_decay: False
+    use_linear_lr_decay: False
+    reward_window_size: 50
+    use_normalized_advantage: False
+    policy_type: "msmt"
+    use_external_memory: True
+    SCENE_MEMORY_TRANSFORMER:
+      memory_size: 159
+      hidden_size: 256
+      nhead: 8
+      num_encoder_layers: 1
+      num_decoder_layers: 1
+      dropout: 0.0
+      activation: 'relu'
+      use_pretrained: True
+      actor_critic_pretrained_path: "-1"
+      audio_pretrained_path: 'data/pretrained_weights/semantic_audionav/enmus/audio_encoder_best_val.pth'
+      visual_pretrained_path: "data/pretrained_weights/semantic_audionav/enmus/visual_encoder_best_val.pth"
+      seld_pretrained_path: "data/pretrained_weights/semantic_audionav/enmus/seld_crnn_best_val.h5"
+      freeze_encoders: True
+      pretraining: False
+      use_belief_encoding: False
+      use_goal_descriptor: True
+    SELD_ENCODER:
+      gd_encoder_type: 'CRNN'
+      use_downsample: True
+      use_goal_similarity: False
+  DDPPO:
+    sync_frac: 0.6
+    distrib_backend: "GLOO"
+    rnn_type: "GRU"
+    num_recurrent_layers: 1
+    backbone: "custom_resnet18"
+    pretrained: False
+    reset_critic: False
