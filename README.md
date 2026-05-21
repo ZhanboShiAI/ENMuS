@@ -101,6 +101,10 @@ Room impulse response dataset is used for audio synthesis. You can download this
 
 The Audio dataset used in this project from three parts, our manual recorded audio files, audio samples selected from [AudioSet](https://research.google.com/audioset/) and [Freesound](https://annotator.freesound.org/). The processed audio wavfiles are saved under `data` directory of the current github repository. The raw 24 bit audio recordings with a sampling rate of 96,000 Hz can be found [here](https://zenodo.org/records/14486235). As for the information of the original audio clips from AudioSet and Freesound, please refer to [this document](./data/sounds/metadata/README.md). 
 
+**Pretrained Weights**
+
+The pretrained weights are already included in this repository under folder `data/pretrained_weights`. You can also download them from the BaiduNetDist [Link](https://pan.baidu.com/s/1NIzjSa9Gkhoc4Z7PwUjh5A?pwd=enmu) if you encouter network issues. 
+
 **Data Folder Structure**
 ```
 data|
